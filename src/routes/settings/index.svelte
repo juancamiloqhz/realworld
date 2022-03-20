@@ -46,7 +46,7 @@
 </script>
 
 <svelte:head>
-	<title>Settings • Conduit</title>
+	<title>Settings • HoySabemosMás</title>
 </svelte:head>
 
 <div class="settings-page">

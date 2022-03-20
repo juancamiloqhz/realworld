@@ -31,14 +31,14 @@
 </script>
 
 <svelte:head>
-	<title>Conduit</title>
+	<title>HoySabemosMás</title>
 </svelte:head>
 
 <div class="home-page">
 	{#if !$session.user}
 		<div class="banner">
 			<div class="container">
-				<h1 class="logo-font">conduit</h1>
+				<h1 class="logo-font">HoySabemosMás</h1>
 				<p>A place to share your knowledge.</p>
 			</div>
 		</div>

@@ -46,7 +46,7 @@
 </script>
 
 <svelte:head>
-	<title>{profile.username} • Conduit</title>
+	<title>{profile.username} • HoySabemosMás</title>
 </svelte:head>
 
 <div class="profile-page">
