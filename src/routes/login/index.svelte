@@ -35,7 +35,7 @@
 </script>
 
 <svelte:head>
-	<title>Sign in • HoySabemosMás</title>
+	<title>Sign in • Art Festivals</title>
 </svelte:head>
 
 <div class="auth-page">

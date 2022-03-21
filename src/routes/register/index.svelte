@@ -32,7 +32,7 @@
 </script>
 
 <svelte:head>
-	<title>Sign up • HoySabemosMás</title>
+	<title>Sign up • Art Festivals</title>
 </svelte:head>
 
 <div class="auth-page">

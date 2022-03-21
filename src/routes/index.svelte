@@ -31,49 +31,48 @@
 </script>
 
 <svelte:head>
-	<title>HoySabemosMás</title>
+	<title>Art Festivals</title>
 </svelte:head>
 
 <div class="home-page">
 	{#if !$session.user}
-		<div class="banner">
-			<div class="container">
-				<h1 class="logo-font">HoySabemosMás</h1>
-				<p>A place to share your knowledge.</p>
+		<div class="banner bg-green-600 shadow-inner text-white p-8">
+			<div class="container mx-auto px-4 text-center">
+				<h1 class="logo-font text-4xl font-bold drop-shadow-lg pb-2">Art Festivals</h1>
+				<p class="text-2xl font-thin">A place to share your knowledge.</p>
 			</div>
 		</div>
 	{/if}
 
-	<div class="container page">
-		<div class="row">
-			<div class="col-md-9">
-				<div class="feed-toggle">
-					<ul class="nav nav-pills outline-active">
-						<li class="nav-item">
+	<div class="container mx-auto my-9">
+		<div class="grid grid-cols-[75%_25%]">
+			<div class="px-4">
+				<div>
+					<ul class="flex">
+						<li class="py-2 px-4 border-b-2 border-transparent text-gray-400  {tab === 'all' && !tag && 'border-green-600 text-green-600'}">
 							<a
 								href="/?tab=all"
 								rel="prefetch"
 								class="nav-link"
-								class:active={tab === 'all' && !tag}
 							>
 								Global Feed
 							</a>
 						</li>
 
 						{#if $session.user}
-							<li class="nav-item">
-								<a href="/?tab=feed" rel="prefetch" class="nav-link" class:active={tab === 'feed'}>
+							<li class="py-2 px-4 border-b-2 border-transparent text-gray-400  {tab === 'feed' && 'border-green-600 text-green-600'}">
+								<a href="/?tab=feed" rel="prefetch" class="nav-link">
 									Your Feed
 								</a>
 							</li>
 						{:else}
-							<li class="nav-item">
+							<li class="py-2 px-4 border-b-2 border-transparent text-gray-400">
 								<a href="/login" rel="prefetch" class="nav-link">Sign in to see your Feed </a>
 							</li>
 						{/if}
 
 						{#if tag}
-							<li class="nav-item">
+							<li class="py-2 px-4 border-b-2 border-transparent border-green-600 text-green-600">
 								<a href="/?tag={tag}" rel="prefetch" class="nav-link active">
 									<i class="ion-pound" />
 									{tag}
@@ -87,12 +86,12 @@
 				<Pagination {pages} {p} href={(p) => `/?${page_link_base}&page=${p}`} />
 			</div>
 
-			<div class="col-md-3">
-				<div class="sidebar">
-					<p>Popular Tags</p>
+			<div class="px-4">
+				<div class="sidebar px-3 bg-gray-100 pt-2 pb-3 rounded">
+					<p class="mb-1">Popular Tags</p>
 					<div class="tag-list">
 						{#each tags as tag}
-							<a href="/?tag={tag}" rel="prefetch" class="tag-default tag-pill"> {tag} </a>
+							<a href="/?tag={tag}" rel="prefetch" class="tag text-white text-sm py-[0.1rem] whitespace-nowrap mr-1 mb-1 inline-block bg-gray-400 hover:bg-gray-500 px-2 rounded-xl"> {tag} </a>
 						{/each}
 					</div>
 				</div>

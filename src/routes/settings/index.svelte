@@ -46,7 +46,7 @@
 </script>
 
 <svelte:head>
-	<title>Settings • HoySabemosMás</title>
+	<title>Settings • Art Festivals</title>
 </svelte:head>
 
 <div class="settings-page">

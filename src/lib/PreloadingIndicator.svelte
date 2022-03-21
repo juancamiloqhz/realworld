@@ -15,20 +15,11 @@
 
 <style>
 	.progress-container {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 4px;
-		z-index: 999;
+		@apply absolute top-0 left-0 w-full h-1 z-[999];
 	}
 
 	.progress {
-		position: absolute;
-		left: 0;
-		top: 0;
-		height: 100%;
-		background-color: #5cb85c;
+		@apply absolute left-0 top-0 h-full bg-green-600;
 		transition: width 0.4s;
 	}
 
