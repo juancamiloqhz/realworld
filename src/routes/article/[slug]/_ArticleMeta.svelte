@@ -13,14 +13,14 @@
 	}
 </script>
 
-<div class="article-meta">
+<div class="article-meta mt-8 font-normal flex items-center">
 	<a href='/profile/@{article.author.username}'>
-		<img src={article.author.image} alt={article.author.username} />
+		<img src={article.author.image} alt={article.author.username} class="h-8 w-8 rounded-full" />
 	</a>
 
-	<div class="info">
-		<a href='/profile/@{article.author.username}' class="author"> {article.author.username}</a>
-		<span class="date">
+	<div class="info ml-2 mr-6">
+		<a href='/profile/@{article.author.username}' class="author text-white leading-3 hover:underline"> {article.author.username}</a>
+		<span class="date block text-gray-400 font-thin text-sm leading-3">
 			{new Date(article.createdAt).toDateString()}
 		</span>
 	</div>

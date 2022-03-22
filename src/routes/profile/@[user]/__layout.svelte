@@ -50,13 +50,13 @@
 </svelte:head>
 
 <div class="profile-page">
-	<div class="user-info">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 col-md-10 offset-md-1">
-					<img src={profile.image} class="user-img" alt={profile.username} />
-					<h4>{profile.username}</h4>
-					<p>{profile.bio}</p>
+	<div class="user-info text-center bg-gray-100 pt-8 pb-4 px-4">
+		<div class="mx-auto max-w-3xl">
+			<div class="row flex flex-wrap justify-center">
+				<div class="w-full">
+					<img src={profile.image} class="user-img mx-auto w-24 h-24 rounded-full mb-4" alt={profile.username} />
+					<h4 class="font-semibold text-xl">{profile.username}</h4>
+					<p class="font-light text-sm text-gray-500 max-w-md mx-auto mb-1">{profile.bio}</p>
 
 					{#if is_user}
 						<a href="/settings" class="btn btn-sm btn-outline-secondary action-btn">
@@ -72,32 +72,30 @@
 							{profile.following ? 'Unfollow' : 'Follow'}
 							{profile.username}
 						</button>
-					{:else}<a href="/login">Sign in to follow</a>{/if}
+					{:else}<a href="/login" class="btn btn-sm btn-outline-secondary action-btn">Sign in to follow</a>{/if}
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="container">
+	<div class="container mx-auto px-4 mt-6">
 		<div class="row">
-			<div class="col-xs-12 col-md-10 offset-md-1">
+			<div class="max-w-3xl mx-auto">
 				<div class="articles-toggle">
-					<ul class="nav nav-pills outline-active">
-						<li class="nav-item">
+					<ul class="flex">
+						<li class="py-2 px-4 border-b-2 border-transparent text-gray-400 {!is_favorites && 'border-green-600 text-green-600'}">
 							<a
 								href="/profile/@{profile.username}"
 								class="nav-link"
 								rel="prefetch"
-								class:active={!is_favorites}
 							>Articles</a>
 						</li>
 
-						<li class="nav-item">
+						<li class="py-2 px-4 border-b-2 border-transparent text-gray-400 {is_favorites && 'border-green-600 text-green-600'}">
 							<a
 								href="/profile/@{profile.username}/favorites"
 								class="nav-link"
 								rel="prefetch"
-								class:active={is_favorites}
 							>Favorites</a>
 						</li>
 					</ul>

@@ -7,7 +7,7 @@
 	export let user;
 </script>
 
-<div class="col-xs-12 col-md-8 offset-md-2">
+<div class="w-full md:ml-[25%] xl:ml-[35%]">
 	{#if user}
 		<div>
 			<CommentInput
@@ -17,10 +17,10 @@
 			/>
 		</div>
 	{:else}
-		<p>
-			<a href="/login">Sign in</a>
+		<p class="mb-4">
+			<a class="text-green-600 hover:underline" href="/login">Sign in</a>
 			or
-			<a href="/register">sign up</a>
+			<a class="text-green-600 hover:underline" href="/register">sign up</a>
 			to add comments on this article.
 		</p>
 	{/if}

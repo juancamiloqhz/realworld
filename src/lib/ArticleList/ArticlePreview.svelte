@@ -45,7 +45,7 @@
 	</div>
 
 	<a href="/article/{article.slug}" rel="prefetch" class="preview-link">
-		<h1 class="font-semibold text-xl">{article.title}</h1>
+		<h1 class="font-medium text-gray-900 text-xl">{article.title}</h1>
 		<p class="font-thin text-gray-400 mb-4 text-base leading-5">{article.description}</p>
 		<span class="max-w-fit text-sm font-thin text-gray-400">Read more...</span>
 		<ul class="tag-list float-right max-w-[50%]">

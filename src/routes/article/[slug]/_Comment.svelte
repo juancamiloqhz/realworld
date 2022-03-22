@@ -18,20 +18,20 @@
 
 <div class="card">
 	<div class="card-block">
-		<p class="card-text">{comment.body}</p>
+		<p class="card-text mb-4 last:mb-0">{comment.body}</p>
 	</div>
 
 	<div class="card-footer">
-		<a href="/profile/@{comment.author.username}" class="comment-author">
-			<img src={comment.author.image} class="comment-author-img" alt={comment.author.username} />
+		<a href="/profile/@{comment.author.username}" class="comment-author inline-block align-middle mr-1">
+			<img src={comment.author.image} class="comment-author-img rounded-full" alt={comment.author.username} />
 		</a>
 
 		<a
 			href="/profile/@{comment.author.username}"
-			class="comment-author"
+			class="comment-author inline-block text-green-600 hover:underline"
 		>{comment.author.username}</a>
 
-		<span class="date-posted"> {new Date(comment.createdAt).toDateString()} </span>
+		<span class="date-posted text-gray-500 text-sm"> {new Date(comment.createdAt).toDateString()} </span>
 
 		{#if user && comment.author.username === user.username}
 			<form

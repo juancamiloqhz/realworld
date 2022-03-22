@@ -44,8 +44,8 @@
 		</div>
 	{/if}
 
-	<div class="container mx-auto my-9">
-		<div class="grid grid-cols-[75%_25%]">
+	<div class="container mx-auto my-9 max-w-screen-xl">
+		<div class="grid grid-cols-[1fr] md:grid-cols-[75%_25%]">
 			<div class="px-4">
 				<div>
 					<ul class="flex">
@@ -91,7 +91,7 @@
 					<p class="mb-1">Popular Tags</p>
 					<div class="tag-list">
 						{#each tags as tag}
-							<a href="/?tag={tag}" rel="prefetch" class="tag text-white text-sm py-[0.1rem] whitespace-nowrap mr-1 mb-1 inline-block bg-gray-400 hover:bg-gray-500 px-2 rounded-xl"> {tag} </a>
+							<a href="/?tag={tag}" rel="prefetch" class="tag transition-all duration-100 ease-in text-white text-sm py-[0.1rem] whitespace-nowrap mr-1 mb-1 inline-block bg-gray-400 hover:bg-gray-500 px-2 rounded-xl"> {tag} </a>
 						{/each}
 					</div>
 				</div>

@@ -34,10 +34,10 @@
 	class="card comment-form"
 	use:ajax={{ onsubmit, onresponse }}
 >
-	<div class="card-block">
+	<div class="card-block !p-0 flex">
 		<textarea
 			disabled={submitting}
-			class="form-control"
+			class="form-control p-5 border-0 w-full rounded-t"
 			name="comment"
 			placeholder="Write a comment..."
 			bind:value={body}
@@ -46,7 +46,7 @@
 	</div>
 
 	<div class="card-footer">
-		<img src={user.image || placeholder} class="comment-author-img" alt={user.username} />
-		<button disabled={submitting} class="btn btn-sm btn-primary" type="submit">Post Comment</button>
+		<img src={user.image || placeholder} class="comment-author-img inline-block w-7 h-7 mr-1 rounded-full" alt={user.username} />
+		<button disabled={submitting} class="btn btn-sm btn-primary float-right" type="submit">Post Comment</button>
 	</div>
 </form>

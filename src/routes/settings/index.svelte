@@ -50,10 +50,10 @@
 </svelte:head>
 
 <div class="settings-page">
-	<div class="container page">
+	<div class="container mx-auto my-9 px-4">
 		<div class="row">
-			<div class="col-md-6 offset-md-3 col-xs-12">
-				<h1 class="text-xs-center">Your Settings</h1>
+			<div class="mx-auto max-w-md">
+				<h1 class="text-center text-3xl mb-3">Your Settings</h1>
 
 				<ListErrors {errors} />
 
@@ -105,7 +105,7 @@
 						</fieldset>
 
 						<button
-							class="btn btn-lg btn-primary pull-xs-right"
+							class="btn btn-lg btn-primary float-right"
 							type="submit"
 							disabled={in_progress}
 						>
@@ -114,7 +114,7 @@
 					</fieldset>
 				</form>
 
-				<hr />
+				<hr class="my-4" />
 
 				<button class="btn btn-outline-danger" on:click={logout}> Or click here to logout. </button>
 			</div>

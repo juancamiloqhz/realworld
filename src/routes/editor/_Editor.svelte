@@ -44,9 +44,9 @@
 </script>
 
 <div class="editor-page">
-	<div class="container page">
+	<div class="container mx-auto my-9">
 		<div class="row">
-			<div class="col-md-10 offset-md-1 col-xs-12">
+			<div class="mx-auto max-w-3xl">
 				<ListErrors {errors} />
 
 				<form
@@ -100,7 +100,7 @@
 							</div>
 						</fieldset>
 
-						<button class="btn btn-lg pull-xs-right btn-primary" disabled={publishing}>
+						<button class="btn btn-lg float-right btn-primary" disabled={publishing}>
 							Publish Article
 						</button>
 					</fieldset>

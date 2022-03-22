@@ -39,11 +39,11 @@
 </svelte:head>
 
 <div class="auth-page">
-	<div class="container page">
+	<div class="container mx-auto my-9 px-4">
 		<div class="row">
-			<div class="col-md-6 offset-md-3 col-xs-12">
-				<h1 class="text-xs-center">Sign In</h1>
-				<p class="text-xs-center">
+			<div class="mx-auto max-w-md">
+				<h1 class="text-center text-3xl mb-2">Sign In</h1>
+				<p class="mb-4 text-center text-green-600 font-light hover:text-green-700 hover:underline">
 					<a href="/register">Need an account?</a>
 				</p>
 
@@ -51,12 +51,12 @@
 
 				<form on:submit|preventDefault={submit}>
 					<fieldset class="form-group">
-						<input class="form-control form-control-lg" type="email" required placeholder="Email" bind:value={email}>
+						<input class="form-control py-3 px-6 " type="email" required placeholder="Email" bind:value={email}>
 					</fieldset>
 					<fieldset class="form-group">
-						<input class="form-control form-control-lg" type="password" required placeholder="Password" bind:value={password}>
+						<input class="form-control py-3 px-6 " type="password" required placeholder="Password" bind:value={password}>
 					</fieldset>
-					<button class="btn btn-lg btn-primary pull-xs-right" type="submit">
+					<button class="btn btn-lg btn-primary float-right" type="submit">
 						Sign in
 					</button>
 				</form>
